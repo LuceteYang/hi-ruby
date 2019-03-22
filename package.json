@@ -1,7 +1,7 @@
 {
   "name": "hi-ruby",
   "version": "1.0.0",
-  "description": "application for webcam chatting using webrtc",
+  "description": "Application for webcam chatting using webrtc",
   "main": "index.js",
   "repository": "https://github.com/LuceteYang/hi-ruby.git",
   "author": "sanghwan <jae6120@naver.com>",
