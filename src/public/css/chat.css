@@ -1,0 +1,134 @@
+html,body {
+  height: 100%;
+  font-family: "Simonetta", cursive;
+  background-color: #fafafa;
+}
+
+.link{
+  color:#CED4DA;
+}
+.link:hover{
+  color:#000;
+}
+.wrap {
+  width: 720px;
+  margin: 0 auto;
+  position: relative;
+  font-size: 1.2em;
+  text-align: center;
+  position:
+}
+
+.wrap p {
+  font-size: 1.25em;
+}
+
+.wrap button {
+  margin-top: 20px;
+  min-width: 80px;
+  vertical-align: top;
+}
+
+.room-info {
+  vertical-align: top;
+}
+
+/********************************************
+  Below room style
+*********************************************/
+video {
+  /* margin: 0 0 20px 0; */
+  width: 100%;
+  z-index: 1;
+  background: #222;
+  border: solid 1px #fff;
+  transition: all 0.6s ease-out;
+}
+
+video.effect {
+  transform: scale(1, 1);
+}
+
+#video-wrap {
+  display: none;
+  position: relative;
+  margin: 0 auto;
+  min-height: 620px;
+}
+
+#video-wrap .buttons {
+  position: absolute;
+  bottom: 0;
+  width:100%;
+}
+
+#local {
+  position: absolute;
+  top: 4%;
+  right: 2%;
+  width: 340px;
+  height: 220px;
+  border: solid 1px #fff;
+}
+
+#local-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#share-wrap {
+  display: none;
+  margin: 10px 0;
+}
+
+.room #enter-wrap,
+.connected #create-wrap,
+.connected #wait-wrap {
+  display: none;
+}
+#enter-wrap{
+  padding-bottom: 100px;
+}
+.connected #local-video {
+  top: 2px;
+  left: 2px !important;
+  width: 150px !important;
+  border: solid 1px #fff;
+  z-index: 2;
+}
+
+.room #share-wrap {
+  display: block;
+}
+
+.room #wait-wrap {
+  display: none;
+}
+
+.room #video-wrap {
+  display: block;
+}
+
+#content{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn {
+  color: #494949 !important;
+  text-transform: uppercase;
+  background: #ffffff;
+  font-size: 15px;
+  padding: 10px;
+  border: 2px solid #494949 !important;
+  border-radius: 6px;
+  display: inline-block;
+}
+.btn:hover {
+  color: #ffffff !important;
+  background: #f6b93b;
+  border-color: #f6b93b !important;
+  transition: all 0.4s ease 0s;
+  }

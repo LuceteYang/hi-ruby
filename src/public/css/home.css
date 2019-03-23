@@ -1,0 +1,72 @@
+body,
+html {
+  height: 100%;
+  font-family: "Simonetta", cursive;
+  color: white;
+}
+header {
+	position: fixed;
+	width: 100%;
+	align-items: center;
+	padding: 35px 70px 0;
+	animation: 1.5s fadein 1.5s forwards;
+	opacity: 0;
+	color: #fff;
+  z-index: 25;
+  float: left;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+@keyframes fadein {
+	100% {
+		opacity: 1;
+	}
+}
+.bg {
+  /* Full height */
+  height: 100%;
+  z-index: 1;
+  position: relative;
+  background-image: url("https://source.unsplash.com/1600x900/?couple");
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bg:after {
+  top: 0;
+  left: 0;
+  position: absolute;
+  opacity: 0.5 !important;
+  background-color: black;
+  filter: alpha(opacity=50);
+  z-index: -1;
+  content: "";
+  width: 100%;
+  height: 100%;
+}
+
+.content h1 {
+  font-size: 60px;
+  margin-bottom: 60px;
+}
+.input-area {
+  text-align: center;
+}
+
+#name-input {
+  /* background: rgba(255,255,255,0.4); */
+  border: 2px solid #fff;
+  box-sizing: border-box;
+  outline: none;
+  width: 80%;
+  font-size: 16px;
+  border-radius: 30px;
+  /* color: #fff; */
+  -webkit-box-shadow: 0 2px 10px 1px rgba(0,0,0,0.5);
+  box-shadow: 0 2px 10px 1px rgba(0,0,0,0.5);
+  padding: 12px 20px 12px 40px;
+}
