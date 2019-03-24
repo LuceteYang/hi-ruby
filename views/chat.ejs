@@ -2,13 +2,14 @@
 <link href="/css/chat.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-<div id="content">
-  <div id="alert">
-</div>
   <div class="wrap">
     <section id="share-wrap">
       Share this link to <%=title%> :)<br>
       <span id="link"></span>&nbsp;&nbsp;&nbsp;<i id="share-link" class="fas fa-link link"></i>
+      <div class="buttons">
+        <button class="btn" id="btn-camera">Camera Pause</button>
+        <button class="btn" id="btn-mic">Mic Mute</button>
+      </div>
     </section>
 
     <section id="enter-wrap">
@@ -17,13 +18,10 @@
         <button class="btn" id="btn-start" class="btn">Start</button>
       </div>
       <div id="wait-wrap"></div>
+      <div id="not-supported"></div>
     </section>
 
     <section id="video-wrap">
-      <div class="buttons">
-        <button class="btn" id="btn-camera">Camera Pause</button>
-        <button class="btn" id="btn-mic">Mic Mute</button>
-      </div>
     </section>
   </div>
 </div>

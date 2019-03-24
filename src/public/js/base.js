@@ -16,18 +16,32 @@ $(function() {
     const checkPage = (location.href.match(/chat|get-user-media|filter|capture/));
     const $commentTarget = $('#alert');
   
-    function showMessage(message) {
-      return $commentTarget.prepend(
-        "<strong class='alert-message'>" + message + "</strong>"
-      );
+    function showMessage(messageHtml) {
+      const $createWrap = $("#create-wrap");
+      const $waitWrap = $("#wait-wrap");
+      const $notSupoorted = $("#not-supported");
+      $notSupoorted.html(messageHtml)
+      $createWrap.css("display", "none");
+      $waitWrap.css("display", "none");
     }
   
     function showNotSupportBrowserMessage() {
-      return showMessage("WebRTC는 현재 Chrome, Firefox, Edge 15이상, Safari 11이상, Opera 브라우저만 지원합니다.");
+      const messageHtml = [
+        '<div class="room-info">',
+        "<p>WebRTC currently supports </p><p>Chrome, Firefox, Edge 15 or higher,</p> <p>Safari 11 or higher and Opera browsers only.</p>",
+        "<p>Please Use Support Browers</p>",
+        "</div>"
+      ].join("\n")
+      return showMessage(messageHtml);
     }
   
     function showNeedCamMessage() {
-      return showMessage('예제는 캠이 있어야 작동합니다.');
+      const messageHtml = [
+        '<div class="room-info">',
+        "<p>You need a cam to work.</p>",
+        "</div>"
+      ].join("\n")
+      return showMessage(messageHtml);
     }
   
     function changeHTTPS() {
@@ -44,7 +58,6 @@ $(function() {
   
       // webrtc 미지원 브라우저 체크
       if (checkPage && !isFirefox && !isChrome && !isOpera && !isEdge && !isSafari) {
-        console.log("여기")
         showNotSupportBrowserMessage();
         return false;
       }
