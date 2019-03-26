@@ -20,7 +20,7 @@
     "dev": "cd src && nodemon --exec ts-node index.ts -e ts",
     "prebuild": "rm -rf dist",
     "build": "tsc",
-    "postbuild": "cd src && cp -r ./public/css ../dist/public/",
+    "postbuild": "cd src && cp -r ./public/css ../dist/public/ && cp -r ./public/img ../dist/public/",
     "start": "cd dist && node ."
   },
   "dependencies": {
