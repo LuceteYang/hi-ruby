@@ -1,6 +1,12 @@
 # hi-ruby
-Application for webcam chatting using webrtc
+This website was created to make video calls. It was created using WebRTC, an API that enables p2p communication.
+<img src="./src/public/img/webrtc-complete-diagram.png" width="500" />
 
+<img src="./src/public/img/main-min.png" width="500" />
+
+
+## Site
+[https://hi-ruby.societyang.xyz](https://hi-ruby.societyang.xyz)
 
 ## Libraries / Tools
 Node.js, TypeScript, WebRTC
