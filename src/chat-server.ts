@@ -4,7 +4,7 @@ import logger from "morgan";
 import path from "path";
 import router from "./controllers/route";
 import SocketServer from "./controllers/socket";
-import Sentry, { Handlers } from "@sentry/node";
+import { Handlers, init } from "@sentry/node";
 
 export class ChatServer {
   public static readonly PORT: number = 3000;
@@ -52,7 +52,7 @@ export class ChatServer {
     this.app.use("/", router);
     if (process.env.NODE_ENV === "production") {
       // 에러 핸들링 전 Sentry 로 캡쳐
-      Sentry.init({ dsn: process.env.SENTRY_DSN });
+      init({ dsn: process.env.SENTRY_DSN });
       this.app.use(Handlers.errorHandler() as express.ErrorRequestHandler);
     }
   }
