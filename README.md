@@ -9,7 +9,7 @@ This website was created to make video calls. It was created using WebRTC, an AP
 [https://hi-ruby.societyang.xyz](https://hi-ruby.societyang.xyz)
 
 ## Libraries / Tools
-Node.js, TypeScript, WebRTC
+Node.js, TypeScript, WebRTC, Sentry
 
 ## Reference
 - WebRTC Tutorial

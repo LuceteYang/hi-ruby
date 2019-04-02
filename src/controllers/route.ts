@@ -1,4 +1,4 @@
-import { Request, Response, Router } from "express";
+import { Request, Response, Router, NextFunction } from "express";
 
 const router = Router();
 
@@ -9,6 +9,10 @@ router.get("/", (req: Request, res: Response) => {
 router.get("/chat/:name", (req: Request, res: Response) => {
   const name = req.params.name;
   res.render("chat.ejs",{title:name});
+});
+
+router.get("/errors", (req: Request, res: Response, next: NextFunction) => {
+      next(new Error('sentry error test'))
 });
 
 export default router;

@@ -7,6 +7,7 @@
   "author": "sanghwan <jae6120@naver.com>",
   "license": "MIT",
   "devDependencies": {
+    "@sentry/typescript": "^5.2.0",
     "@types/dotenv": "^6.1.0",
     "@types/express": "^4.16.1",
     "@types/node": "^11.11.4",
@@ -24,6 +25,7 @@
     "start": "cd dist && node ."
   },
   "dependencies": {
+    "@sentry/node": "^5.2.0",
     "dotenv": "^7.0.0",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
