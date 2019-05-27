@@ -25,6 +25,8 @@
     "node_modules",
     "build",
     "scripts",
+    "test",
+    "jest.config.js",
     "acceptance-tests",
     "webpack",
     "jest",
