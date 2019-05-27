@@ -18,21 +18,17 @@ export default class SocketServer {
 
         // 룸에 사용자 정보 추가, 이미 룸이 있는경우
         if (this.rooms[roomId]) {
-          console.log("이미 룸이 있는 경우");
           this.rooms[roomId][socket.id] = userId;
-          // 룸 생성 후 사용자 추가
         } else {
-          console.log("룸 추가");
+          // 룸 생성 후 사용자 추가
           this.rooms[roomId] = {};
           this.rooms[roomId][socket.id] = userId;
         }
         let thisRoom = this.rooms[roomId];
-        console.log("thisRoom", thisRoom);
 
         // 유저 정보 추가
         this.io.sockets.in(roomId).emit("join", roomId, thisRoom);
         //console.log('ROOM LIST', io.sockets.adapter.this.rooms);
-        console.log("ROOM LIST", this.rooms);
       });
 
       /**

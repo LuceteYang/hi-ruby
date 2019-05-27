@@ -11,7 +11,7 @@ router.get("/chat/:name", (req: Request, res: Response) => {
   res.render("chat.ejs",{title:name});
 });
 
-router.get("/errors", (req: Request, res: Response, next: NextFunction) => {
+router.get("/error-test", (req: Request, res: Response, next: NextFunction) => {
       next(new Error('sentry error test'))
 });
 
