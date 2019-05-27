@@ -12,6 +12,7 @@ router.get("/chat/:name", (req: Request, res: Response) => {
 });
 
 router.get("/error-test", (req: Request, res: Response, next: NextFunction) => {
+  // branch test
       next(new Error('sentry error test'))
 });
 
