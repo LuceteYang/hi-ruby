@@ -5,9 +5,6 @@ This website was created to make video calls. It was created using WebRTC, an AP
 <img src="./src/public/img/main-min.png" width="500" />
 
 
-## Site
-[https://hi-ruby.societyang.xyz](https://hi-ruby.societyang.xyz)
-
 ## Libraries / Tools
 Node.js, TypeScript, WebRTC, Sentry
 
